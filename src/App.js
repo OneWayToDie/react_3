@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+﻿import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header.js';
+import Hello from './components/Hello.js';
+import Form from './components/Form.js';
+import Range from './components/Range.js';
+import Posts from './components/Posts.js';
 
 function App() {
+    let posts =
+        [
+            { id: '1', title: 'Procedure C++', description: 'Процедурное программирование на языке С++' },
+            { id: '2', title: 'OOP C++', description: 'Объектно-ориентированное программирование на языке С++' },
+            { id: '3', title: 'Windows Desktop', description: 'Разработка настольных приложение для Windows' },
+        ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/* <Header /> */}
+    <Hello />
+    <Form />
+    <Range />
+          <Posts posts={ posts } />
     </div>
   );
 }
